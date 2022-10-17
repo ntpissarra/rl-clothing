@@ -9,7 +9,7 @@ import {
 } from '../../utils/firebase/firebase.utils';
 
 import FormInput from '../form-input/form-input.component';
-import Button from '../button/button.component';
+import Button, { BUTTON_TYPES_CLASS } from '../button/button.component';
 
 const defaultformFields = {
 	email: '',
@@ -89,7 +89,7 @@ const SignInForm = () => {
 					<Button children="sign in" />
 					<Button
 						type="button"
-						buttonType="google"
+						buttonType={BUTTON_TYPES_CLASS.google}
 						onClick={signInWithGoogle}
 						children="sign in with google"
 					/>
